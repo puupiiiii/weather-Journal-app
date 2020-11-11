@@ -5,8 +5,8 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 
-// Personal API Key for OpenWeatherMap API
-const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+// Personal API Key for OpenWeatherMap API     ==> 'http://api.openweathermap.org/data/2.5/weather?zip='
+const baseUrl = 'api.openweathermap.org/data/2.5/weather?3359a4f3a9207a5e343bbb36bfcf97ac';
 const apiKey = '3359a4f3a9207a5e343bbb36bfcf97ac';
 
 // Event listener to add function to existing HTML DOM element
@@ -17,8 +17,8 @@ function performAction(e){
 const newZip =  document.getElementById('zip').value;
 const feelings = document.getElementById('feelings').value;
 getWeather(baseUrl, newZip, apiKey)
-    .then(function (data) {
-    postData ('/addweather', {date: newDate, temp: ata.main.temp, content:user_response})
+    .then(function (userData) {
+    postData ('/addweather', {date: newDate, temp: userData.main.temp, content:user_response})
     })
     .then(function (newData) {
     // call updateUI to update browser content
@@ -32,9 +32,9 @@ getWeather(baseUrl, newZip, apiKey)
 const getWeather = async (baseUrl, newZip, apiKey)=>{
     const res = await fetch(baseUrl + newZip + apiKey)
     try {
-        const data = await res.json();
-        console.log(data);
-        return data;
+        const userData = await res.json();
+        console.log(userData);
+        return userData;
     }  catch(error) {
         console.log("error", error);
         // appropriately handle the error
