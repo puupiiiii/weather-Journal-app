@@ -1,0 +1,20 @@
+{
+  "name": "weather-journal-app",
+  "version": "1.0.0",
+  "description": "professional web developer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puupiiiii/weather-Journal-app.git"
+  },
+  "author": "Heba Salem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puupiiiii/weather-Journal-app/issues"
+  },
+  "homepage": "https://github.com/puupiiiii/weather-Journal-app#readme"
+}
