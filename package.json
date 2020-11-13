@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/puupiiiii/weather-Journal-app/issues"
   },
-  "homepage": "https://github.com/puupiiiii/weather-Journal-app#readme"
+  "homepage": "https://github.com/puupiiiii/weather-Journal-app#readme",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "install": "^0.13.0"
+  }
 }
