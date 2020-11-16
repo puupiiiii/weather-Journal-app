@@ -44,5 +44,6 @@
         projectData.temp = req.body.temp;
         projectData.date = req.body.date;
         projectData.content = req.body.user_response;
+        projectData.userResponse = req.body.content;
         res.send(projectData);
     } );
